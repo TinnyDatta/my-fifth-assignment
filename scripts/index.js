@@ -61,7 +61,46 @@ const allBtn = document.getElementsByClassName("add-btn");
 let count = 0;
 
 for (const btn of allBtn ){
-    btn.addEventListener("click", function (){
-       
+    btn.addEventListener("click", function (e){
+       count = count + 1;
+
+       const seatName = e.target.innerText;
+    //    const className =  document. createElement("className");
+    //    className.append("Economy");
+    //    const price = document. createElement("price");
+    //    price.append(550);
+    // const price = e.target.innerText;
+
+       console.log(seatName);
+
+       const selectedContainer = document.getElementById("selected-seat");
+       const li = document.createElement("li");
+       const p = document.createElement("p");
+       p.innerText= seatName;
+    //    const p2 = document.createElement("p2");
+    //    p2. innerText= className;
+    //    const p2 = document.createElement("p2");
+    //    p2.innerText= price;
+
+       li.appendChild(p);
+    //    li.appendChild(p2);
+    //    li.appendChild(p3);
+       selectedContainer.appendChild(li);
+
+       const totalCost = document.getElementById("total-cost").innerText;
+       const changeType = parseInt(totalCost);
+
+       setUpOfInnerText("seat-count", count)
     })
+}
+let minus = 8;
+for (const btn of allBtn ){
+    btn.addEventListener("click", function (e){
+       minus = minus - 1;
+       setUpOfInnerText("left-seats", minus)
+    })
+}
+
+function setUpOfInnerText(id, value){
+    document.getElementById(id).innerText = value;
 }

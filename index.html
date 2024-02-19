@@ -136,7 +136,7 @@
             </div>
            
             <div>
-              <a class="btn bg-[#1dd1001a] text-[#1DD100] "><span><img src="images/seat-green.png" alt=""></span>8 Seats left</a>
+              <a id="left-seats" class="btn bg-[#1dd1001a] text-[#1DD100] "><span><img src="images/seat-green.png" alt=""></span>8 Seats left</a>
               
             </div>
             </div>
@@ -144,7 +144,7 @@
             <!-- 550tk div -->
             <div class=" flex-1 w-32 ml-10 pt-20">
             <img src="images/fare.png" alt="">
-            <h1 class="font-bold text-2xl pt-4">550 Taka</h1>
+            <h1 id="price" class="font-bold text-2xl pt-4">550 Taka</h1>
             <p class="font-semibold text-xl">Per Seat</p>
             </div>
           </div>
@@ -173,7 +173,9 @@
               <div class="flex flex-row justify-end py-6 pr-8"><button class="btn w-28"><img src="images/Vector.png" alt=""></button></div>
               <!-- A buttons -->
               <div class="grid lg:grid-cols-4 pb-6">
-               <div><button id="aOne" class="btn w-28 add-btn">A1</button></div>
+               <div>
+                <button id="aOne" class="btn w-28 add-btn">A1</button>
+              </div>
                <div><button id="aTwo" class="btn w-28 add-btn">A2</button></div>
                <div><button id="aThree" class="btn w-28 add-btn">A3</button></div>
                <div><button id="aFour" class="btn w-28 add-btn">A4</button></div>
@@ -191,36 +193,47 @@
               <div class="bg-gray-100 pl-10 rounded-xl mr-10 ">
               
                 <div class="grid lg:grid-cols-3 mt-6 ">
-                  <div class="font-medium"><h3>Seat</h3></div>
+                  <div class="font-medium flex flex-row">
+                    <span>Seat</span>
+                    <button id="seat-count" class="bg-[#1DD100] w-8 rounded-xl text-white"></button>
+                    <!-- <h3 id="seat-count">Seat</h3> -->
+                  </div>
                   <div class="font-medium"><h3>Class</h3></div>
                   <div class="font-medium"><h3>Price</h3></div>
                 </div>
                 <hr class="my-5">
-                <div class="grid lg:grid-cols-3 mt-6 ">
+                <!-- <div class="grid lg:grid-cols-3 mt-6 ">
                   <div><h3>B2</h3></div>
                   <div><h3>Economy</h3></div>
                   <div><h3>550</h3></div>
-                </div>
+                </div> -->
                 
                 <div class="grid lg:grid-cols-3 mt-6 ">
-                  <div><h3>A2</h3></div>
-                  <div><h3>Economy</h3></div>
-                  <div><h3>550</h3></div>
+                  <div>
+                    <ul id="selected-seat"
+                      class="selected-seat"  >
+                      <li class="grid grid-cols-3">
+                        <p></p>
+                        <p ></p>
+                        <p></p>
+                      </li>
+
+                    </ul>
+                  </div>
                 </div>
                 <hr class="my-5">
-                <div class="grid lg:grid-cols-2">
-                  <div class="font-medium"> Total Price</div>
-                  <div class="font-medium"> BDT 1150</div>
+                <div>
+                  <h4 class="font-medium">Total Price <span id="total-cost" class="pl-44 font-medium">BDT 0</span></h4>
+                 
                 </div>
                 <div class="my-4">
                   <label class="input input-bordered flex items-center w-[300px]">
-                    <input type="text" class="grow" placeholder="Have any copupon?" />
+                    <input type="text" class="grow" placeholder="Have any coupon?" />
                     <button class="bg-[#1DD100] text-white w-36 text-center rounded-xl">Apply</button>
                   </label>
                 </div>
-                <div class="grid lg:grid-cols-2 pb-8">
-                  <div class="font-medium">Grand Total</div>
-                  <div class="font-medium"> BDT 1150</div>
+                <div>
+                  <h4 class="font-medium">Grand Total <span class="pl-44 font-medium">BDT 0</span></h4>
                 </div>
               </div>
               <div class="">
