@@ -45,7 +45,7 @@
     </header>
     <main>
         <!-- ------banner section--- -->
-        <section class="px-32 pt-8">
+        <section id="banner" class="px-32 pt-8">
           <div class="hero h-[550px] rounded-3xl" style="background-image: url(images/banner.png);">
             <div class="hero-overlay bg-opacity-10"></div>
             <div class="hero-content text-center text-neutral-content">
@@ -54,7 +54,7 @@
                   <hr>
                   <span class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="mb-5 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn bg-[#1DD100]"><span class="text-black">Buy Tickets</span></button>
+                <a href="#paribahan"><button onclick="buyTickets()" class="btn bg-[#1DD100]"><span class="text-black">Buy Tickets</span></button></a>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@
            </div>
         </section>
         <!-- p.h paribahan section -->
-        <section class="px-32 pt-28 mt-28 bg-[#F7F8F8]  rounded-t-[88px]">
+        <section id="paribahan" class="px-32 pt-28 mt-28 bg-[#F7F8F8]  rounded-t-[88px]">
           <!-- main div -->
           <div class="bg-white rounded-3xl py-8">
             <h1 class="text-2xl font-semibold text-[#030712] pb-10 px-[450px]">P.H Paribahan</h1>
@@ -173,16 +173,16 @@
               <div class="flex flex-row justify-end py-6 pr-8"><button class="btn w-28"><img src="images/Vector.png" alt=""></button></div>
               <!-- A buttons -->
               <div class="grid lg:grid-cols-4 pb-6">
-               <div><button class="btn w-28">A1</button></div>
-               <div><button class="btn w-28">A2</button></div>
-               <div><button class="btn w-28">A3</button></div>
-               <div><button class="btn w-28">A4</button></div>
+               <div><button id="aOne" class="btn w-28 add-btn">A1</button></div>
+               <div><button id="aTwo" class="btn w-28 add-btn">A2</button></div>
+               <div><button id="aThree" class="btn w-28 add-btn">A3</button></div>
+               <div><button id="aFour" class="btn w-28 add-btn">A4</button></div>
               </div>
               <div class="grid lg:grid-cols-4">
-               <div><button class="btn w-28">B1</button></div>
-               <div><button class="btn w-28">B2</button></div>
-               <div><button class="btn w-28">B3</button></div>
-               <div><button class="btn w-28">B4</button></div>
+               <div><button id="bOne" class="btn w-28 add-btn">B1</button></div>
+               <div><button id="bTwo" class="btn w-28 add-btn">B2</button></div>
+               <div><button id="bThree" class="btn w-28 add-btn">B3</button></div>
+               <div><button id="bFour" class="btn w-28 add-btn">B4</button></div>
               </div>
             </div>
             <div class=" w-[500px]">
@@ -231,5 +231,6 @@
           </div>
         </section>
     </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
