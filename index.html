@@ -54,7 +54,7 @@
                   <hr>
                   <span class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="mb-5 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn btn-primary bg-[#1DD100]"><span class="text-black">Buy Tickets</span></button>
+                <button class="btn bg-[#1DD100]"><span class="text-black">Buy Tickets</span></button>
               </div>
             </div>
           </div>
@@ -101,51 +101,133 @@
            </div>
         </section>
         <!-- p.h paribahan section -->
-        <section class="px-32 pt-28">
-          <h1 class="text-3xl font-semibold text-[#030712] pb-10 px-[450px]">P.H Paribahan</h1>
-          <p class="px-[250px] pb-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        <section class="px-32 pt-28 mt-28 bg-[#F7F8F8]  rounded-t-[88px]">
           <!-- main div -->
-          <div class="flex flex-row flex-1  gap-40">
+          <div class="bg-white rounded-3xl py-8">
+            <h1 class="text-2xl font-semibold text-[#030712] pb-10 px-[450px]">P.H Paribahan</h1>
+          <p class="px-[250px] pb-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+          
             <!-- two more div -->
-            <div class="flex flex-row gap-40">
+            <div class="flex flex-row">
             <div class="flex flex-row gap-2">
-              <div>
+              <div class="pl-4">
                 <img src="images/bus-logo.png" alt="">
               </div>
               <div>
                 <h1 class="font-bold text-3xl">Greenline Paribahan</h1>
-                <p>Coach-009-WEB ! AC_Business</p>
-                <div>
-                 <div class="flex flex-row flex-1 gap-60">
+                <p class="pb-6">Coach-009-WEB ! AC_Business</p>
+                <div class="bg-gray-100 border-s-orange-600 rounded-xl p-5">
+                 <div class="flex flex-row flex-1 justify-between pb-3">
                   <p>Route</p>
                   <p>Dhaka - Sylhet</p>
                  </div>
-                 <div class="flex flex-row flex-1 gap-60">
+                 <hr class="pb-5">
+                 <div class="flex flex-row flex-1 justify-between pb-3">
                   <p>Departure Time</p>
                   <p>9:00 PM</p>
                  </div>
-                 <div class="grid lg:grid-cols-3 gap-10">
+                 <hr class="pb-5">
+                 <div class="grid lg:grid-cols-3 justify-around gap-10">
                   <button class="bg-gray-300  h-8 rounded-lg">Boarding Point - Laxmipur</button>
                   <button class="bg-gray-300 h-8 rounded-lg">Dropping Point - Bogura</button>
                   <button class="bg-gray-300 h-8 rounded-lg">Est. Time - 11 Hour</button>
                  </div>
                 </div>
-              </div>
-              
             </div>
            
-            <div class="">
-              <a class="btn bg-[#1dd1001a] text-[#1DD100]"><span><img src="images/seat-green.png" alt=""></span>40 Seats left</a>
+            <div>
+              <a class="btn bg-[#1dd1001a] text-[#1DD100] "><span><img src="images/seat-green.png" alt=""></span>8 Seats left</a>
               
             </div>
             </div>
             
             <!-- 550tk div -->
-            <div class=" flex-1">
+            <div class=" flex-1 w-32 ml-10 pt-20">
             <img src="images/fare.png" alt="">
-            <h1 class="font-bold text-2xl pt-6">550 Taka</h1>
+            <h1 class="font-bold text-2xl pt-4">550 Taka</h1>
             <p class="font-semibold text-xl">Per Seat</p>
             </div>
+          </div>
+          </div>
+        </section>
+        <!-- select your seat  -->
+        <section class="px-32 mt-6 bg-[#F7F8F8]">
+          <div class="flex flex-row flex-1 gap-4 bg-white rounded-3xl">
+            <div class="w-[600px] py-7">
+              <h1 class="font-semibold text-2xl mb-4">Select Your Seat</h1>
+              <div class="flex flex-row justify-between">
+                <div class="flex flex-row gap-2">
+                  <div>
+                    <img src="images/seat-gray.png" alt="">
+                  </div>
+                  <div>
+                    <h1 class="text-[#03071280]">Available</h1>
+                  </div>
+                </div>
+                <div class="flex flex-row gap-2 pr-8">
+                  <div><img src="images/seat-green-filled.png" alt=""></div>
+                  <div><h1 class="text-[#1DD100] font-medium">Selected</h1></div>
+                </div>
+              </div>
+              <!-- vector png div -->
+              <div class="flex flex-row justify-end py-6 pr-8"><button class="btn w-28"><img src="images/Vector.png" alt=""></button></div>
+              <!-- A buttons -->
+              <div class="grid lg:grid-cols-4 pb-6">
+               <div><button class="btn w-28">A1</button></div>
+               <div><button class="btn w-28">A2</button></div>
+               <div><button class="btn w-28">A3</button></div>
+               <div><button class="btn w-28">A4</button></div>
+              </div>
+              <div class="grid lg:grid-cols-4">
+               <div><button class="btn w-28">B1</button></div>
+               <div><button class="btn w-28">B2</button></div>
+               <div><button class="btn w-28">B3</button></div>
+               <div><button class="btn w-28">B4</button></div>
+              </div>
+            </div>
+            <div class=" w-[500px]">
+              <!-- select your seat right -->
+              <h1 class="font-semibold text-2xl pt-7">Select Your Seat</h1>
+              <div class="bg-gray-100 pl-10 rounded-xl mr-10 ">
+              
+                <div class="grid lg:grid-cols-3 mt-6 ">
+                  <div class="font-medium"><h3>Seat</h3></div>
+                  <div class="font-medium"><h3>Class</h3></div>
+                  <div class="font-medium"><h3>Price</h3></div>
+                </div>
+                <hr class="my-5">
+                <div class="grid lg:grid-cols-3 mt-6 ">
+                  <div><h3>B2</h3></div>
+                  <div><h3>Economy</h3></div>
+                  <div><h3>550</h3></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 mt-6 ">
+                  <div><h3>A2</h3></div>
+                  <div><h3>Economy</h3></div>
+                  <div><h3>550</h3></div>
+                </div>
+                <hr class="my-5">
+                <div class="grid lg:grid-cols-2">
+                  <div class="font-medium"> Total Price</div>
+                  <div class="font-medium"> BDT 1150</div>
+                </div>
+                <div class="my-4">
+                  <label class="input input-bordered flex items-center w-[300px]">
+                    <input type="text" class="grow" placeholder="Have any copupon?" />
+                    <button class="bg-[#1DD100] text-white w-36 text-center rounded-xl">Apply</button>
+                  </label>
+                </div>
+                <div class="grid lg:grid-cols-2 pb-8">
+                  <div class="font-medium">Grand Total</div>
+                  <div class="font-medium"> BDT 1150</div>
+                </div>
+              </div>
+              <div class="">
+                <button class="btn btn-wide bg-[#1DD100] text-white mt-6 w-[450px] ">Next</button>
+              </div>
+            </div>
+            
           </div>
         </section>
     </main>
