@@ -57,6 +57,8 @@ bFour.addEventListener('click', function onClick() {
     bFour.style.color = 'white'
 });
 
+
+
 const allBtn = document.getElementsByClassName("add-btn");
 let count = 0;
 
@@ -64,32 +66,30 @@ for (const btn of allBtn ){
     btn.addEventListener("click", function (e){
        count = count + 1;
 
+       const seatPrice = e.target.innerText;
        const seatName = e.target.innerText;
-    //    const className =  document. createElement("className");
-    //    className.append("Economy");
-    //    const price = document. createElement("price");
-    //    price.append(550);
-    // const price = e.target.innerText;
+    
 
-       console.log(seatName);
+       console.log(seatName, parseInt(seatPrice));
 
        const selectedContainer = document.getElementById("selected-seat");
        const li = document.createElement("li");
        const p = document.createElement("p");
        p.innerText= seatName;
-    //    const p2 = document.createElement("p2");
-    //    p2. innerText= className;
-    //    const p2 = document.createElement("p2");
-    //    p2.innerText= price;
-
+   
        li.appendChild(p);
-    //    li.appendChild(p2);
-    //    li.appendChild(p3);
        selectedContainer.appendChild(li);
 
        const totalCost = document.getElementById("total-cost").innerText;
-       const changeType = parseInt(totalCost);
-
+       const changeTypeOfTotalCost = parseInt(totalCost);
+      const sum = changeTypeOfTotalCost+ parseInt(seatPrice);
+      
+      const grandTotalCost =document.getElementById("grand-total").innerText;
+       const changeTypeOfGrandTotalCost = parseInt(grandTotalCost);
+      const sum2 = changeTypeOfGrandTotalCost + parseInt(seatPrice);
+       
+       setUpOfInnerText("total-cost", sum)
+       setUpOfInnerText("grand-total", sum2)
        setUpOfInnerText("seat-count", count)
     })
 }
