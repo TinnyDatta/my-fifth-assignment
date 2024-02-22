@@ -99,41 +99,12 @@ for (const btn of allBtn ){
        updateTotalCost(price);
        updateGrandTotal();
 
-    //    const seatPrice = e.target.innerText;
-    //    const seatName = e.target.innerText;
     
-
-    //    console.log(seatName);
-
-       
-    // //    ------------try---------
-       
-    // //    ----------main----------
-       
-    //    
-    //    p.innerText= seatName;
-   
-    //    li.appendChild(p);
-    //    selectedContainer.appendChild(li);
-        //   *****************needed***************
-    //    const totalCost = document.getElementById("total-cost").innerText;
-    //    const changeTypeOfTotalCost = parseInt(totalCost);  
-    //   const sum = changeTypeOfTotalCost+ parseInt(seatPrice);
-      
-    //   const grandTotalCost =document.getElementById("grand-total").innerText;
-    //    const changeTypeOfGrandTotalCost = parseInt(grandTotalCost);
-    //   const sum2 = changeTypeOfGrandTotalCost + parseInt(seatPrice);
-       
-    //    setUpOfInnerText("total-cost", sum)
-    //    setUpOfInnerText("grand-total", sum2)
        setUpOfInnerText("seat-count", count)
     })
 }
 
-// function updateGrandTotal (){
-//     const totalCost = getConvertedValue("total-cost");
-//     document.getElementById("grand-total").innerText=totalCost;
-// }
+
 
 function updateGrandTotal (status){
     const totalCost = getConvertedValue("total-cost");
@@ -154,8 +125,7 @@ function updateGrandTotal (status){
          else {
             alert ("Please enter valid coupon code");
         }
-    
-        // ///////
+
         
 
     }
@@ -189,8 +159,6 @@ function setUpOfInnerText(id, value){
     document.getElementById(id).innerText = value;
 }
 
-// const leftSeats = getConvertedValue("left-seats");
-// const seatCount = getConvertedValue("seat-count");
 
 
 function getConvertedValue(id){
