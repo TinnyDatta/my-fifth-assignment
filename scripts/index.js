@@ -72,6 +72,9 @@ for (const btn of allBtn ){
 
        const selectedContainer = document.getElementById("selected-btn-container");
 
+       e.target.setAttribute("disabled" , false)
+
+
        const seatCount = getConvertedValue("seat-count");
        if(seatCount+1>4){
         alert("Cannot book more than four seats at a time");
@@ -127,9 +130,36 @@ for (const btn of allBtn ){
     })
 }
 
-function updateGrandTotal (){
+// function updateGrandTotal (){
+//     const totalCost = getConvertedValue("total-cost");
+//     document.getElementById("grand-total").innerText=totalCost;
+// }
+
+function updateGrandTotal (status){
     const totalCost = getConvertedValue("total-cost");
-    document.getElementById("grand-total").innerText=totalCost;
+    if (status == undefined){
+        document.getElementById("grand-total").innerText=totalCost;
+    } else {
+        const couponCode = document.getElementById("coupon-code").value;
+        if(couponCode == "Couple20"){
+            const discountPrice = totalCost * 0.2;
+            document.getElementById("grand-total").innerText= totalCost - discountPrice;
+        } 
+        
+
+        else if(couponCode == "NEW15"){
+            const discountPrice = totalCost * 0.15;
+            document.getElementById("grand-total").innerText= totalCost - discountPrice;
+        }
+         else {
+            alert ("Please enter valid coupon code");
+        }
+    
+        // ///////
+        
+
+    }
+   
 }
 
 
