@@ -65,34 +65,88 @@ let count = 0;
 for (const btn of allBtn ){
     btn.addEventListener("click", function (e){
        count = count + 1;
+       const name = e.target.parentNode.childNodes[1].innerText;
+       const className = e.target.parentNode.childNodes[3].innerText;
+       const price =e.target.parentNode.childNodes[5].innerText;
+      
 
-       const seatPrice = e.target.innerText;
-       const seatName = e.target.innerText;
+       const selectedContainer = document.getElementById("selected-btn-container");
+
+       const seatCount = getConvertedValue("seat-count");
+       if(seatCount+1>4){
+        alert("Cannot book more than four seats at a time");
+        return;
+       }
+
+       const div = document.createElement("div");
+       div.classList.add("selected-seats");
+
+       const p = document.createElement("p");
+       const p1 = document.createElement("p");
+       const p2 = document.createElement("p");
+       p.innerText = name;
+       p1.innerText = className;
+       p2.innerText = price;
+
+       div.appendChild(p);
+       div.appendChild(p1);
+       div.appendChild(p2);
+
+       selectedContainer.appendChild(div);
+       updateTotalCost(price);
+       updateGrandTotal();
+
+    //    const seatPrice = e.target.innerText;
+    //    const seatName = e.target.innerText;
     
 
-       console.log(seatName, parseInt(seatPrice));
+    //    console.log(seatName);
 
-       const selectedContainer = document.getElementById("selected-seat");
-       const li = document.createElement("li");
-       const p = document.createElement("p");
-       p.innerText= seatName;
-   
-       li.appendChild(p);
-       selectedContainer.appendChild(li);
-
-       const totalCost = document.getElementById("total-cost").innerText;
-       const changeTypeOfTotalCost = parseInt(totalCost);
-      const sum = changeTypeOfTotalCost+ parseInt(seatPrice);
-      
-      const grandTotalCost =document.getElementById("grand-total").innerText;
-       const changeTypeOfGrandTotalCost = parseInt(grandTotalCost);
-      const sum2 = changeTypeOfGrandTotalCost + parseInt(seatPrice);
        
-       setUpOfInnerText("total-cost", sum)
-       setUpOfInnerText("grand-total", sum2)
+    // //    ------------try---------
+       
+    // //    ----------main----------
+       
+    //    
+    //    p.innerText= seatName;
+   
+    //    li.appendChild(p);
+    //    selectedContainer.appendChild(li);
+        //   *****************needed***************
+    //    const totalCost = document.getElementById("total-cost").innerText;
+    //    const changeTypeOfTotalCost = parseInt(totalCost);  
+    //   const sum = changeTypeOfTotalCost+ parseInt(seatPrice);
+      
+    //   const grandTotalCost =document.getElementById("grand-total").innerText;
+    //    const changeTypeOfGrandTotalCost = parseInt(grandTotalCost);
+    //   const sum2 = changeTypeOfGrandTotalCost + parseInt(seatPrice);
+       
+    //    setUpOfInnerText("total-cost", sum)
+    //    setUpOfInnerText("grand-total", sum2)
        setUpOfInnerText("seat-count", count)
     })
 }
+
+function updateGrandTotal (){
+    const totalCost = getConvertedValue("total-cost");
+    document.getElementById("grand-total").innerText=totalCost;
+}
+
+
+
+
+
+function updateTotalCost (price) {
+    const totalCost = getConvertedValue("total-cost");
+   
+    const convertedPrice = parseInt(price);
+    const sum = totalCost +convertedPrice;
+    document.getElementById("total-cost").innerText=sum;
+}
+
+
+
+
 let minus = 8;
 for (const btn of allBtn ){
     btn.addEventListener("click", function (e){
@@ -104,3 +158,14 @@ for (const btn of allBtn ){
 function setUpOfInnerText(id, value){
     document.getElementById(id).innerText = value;
 }
+
+// const leftSeats = getConvertedValue("left-seats");
+// const seatCount = getConvertedValue("seat-count");
+
+
+function getConvertedValue(id){
+    const price = document.getElementById(id).innerText;
+    const convertPrice = parseInt(price);
+    return convertPrice;
+}
+
