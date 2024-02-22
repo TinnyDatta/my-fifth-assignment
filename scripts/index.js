@@ -72,15 +72,18 @@ for (const btn of allBtn ){
 
        const selectedContainer = document.getElementById("selected-btn-container");
 
-       e.target.setAttribute("disabled" , false)
-
-
+       e.target.setAttribute("disabled" , false);
+       
+      
        const seatCount = getConvertedValue("seat-count");
        if(seatCount+1>4){
         alert("Cannot book more than four seats at a time");
         return;
        }
-
+          
+      
+       e.target.parentNode.style.backgroundColor= '#1DD100';
+          
        const div = document.createElement("div");
        div.classList.add("selected-seats");
 
@@ -104,7 +107,7 @@ for (const btn of allBtn ){
     })
 }
 
-
+ 
 
 function updateGrandTotal (status){
     const totalCost = getConvertedValue("total-cost");
